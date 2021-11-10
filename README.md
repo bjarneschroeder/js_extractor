@@ -1,6 +1,5 @@
-#Introduction
-
-**js_extractor** enables you to extract JavaScript Variables, Arrays and Dictionaries 
+# Introduction
+This package enables you to extract JavaScript Variables, Arrays and Dictionaries 
 from a given String containing JavaScript code with one method call.
 The result is a Python Dictionary which contains the variable names as keys and 
 the stored content as the value.
@@ -11,8 +10,8 @@ I recommend reading the documentation of [chompjs](https://github.com/Nykakin/ch
 package underlies the same limitations.
 The search for JavaScript Dictionaries, Arrays and Variables is done with regex. 
 
-##Usage
-###Extracting Dictionaries:
+## Usage
+### Extracting Dictionaries:
 ```python
 from js_extractor import extract_js_content
 
@@ -26,7 +25,7 @@ print(result['variable']['name'])
 court 
 ```
 
-###Extracting Arrays:
+### Extracting Arrays:
 ```python
 from js_extractor import extract_js_content
 
@@ -40,7 +39,7 @@ print(result)
 ]}
 ```
 
-###Extracting single values:
+### Extracting single values:
 Because [chompjs](https://github.com/Nykakin/chompjs) needs valid JSON to succesfully parse a string, single values will be wrapped in a list.
 ```python
 from js_extractor import extract_js_content
@@ -55,7 +54,7 @@ print(result['variable'][0])
 hallo
 ```
 
-###Using a list of JavaScript content strings as input:
+### Using a list of JavaScript content strings as input:
 Often JavaScript content is all over the place in scraped websites and appears in multiple tags.
 You don't have to concat all the content into one string.
 **extract_js_content** can also take a list of strings and generate one result dictionary.
@@ -86,12 +85,12 @@ print(result)
 ```
 
 
-#Installation
+# Installation
 Installation via PyPi is recommended. You can install the package in your environment via:
 ```
 pip install js_extractor
 ```
 
-#Notes
+# Notes
 This is the first time I distribute code, so please forgive me the rookie mistakes.  
 ¯\\_(ツ)_/¯

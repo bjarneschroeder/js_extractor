@@ -1,0 +1,1 @@
+from js_extractor.js_extractor import extract_js_content

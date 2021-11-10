@@ -7,7 +7,7 @@ regex.Default_VERSION = regex.VERSION0
 
 def extract_js_content(content: Union[list, str]) -> dict[str, Union[dict, list, str]]:
     """
-    Extracts from scraped JavaScript content which is either a list of strings
+    Extracts from scraped JavaScript content, which is either a list of strings
     or a single string, all dictionaries and lists and parses them
     to Python lists or dictionaries.
 

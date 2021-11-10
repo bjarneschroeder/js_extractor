@@ -27,7 +27,7 @@ setup(
   classifiers=[
     'Development Status :: 3 - Alpha',      
     'Intended Audience :: Developers',      
-    'Topic :: Software Development :: Scraping',
+    'Topic :: Software Development :: Libraries :: Python Modules',
     'License :: OSI Approved :: MIT License',   # Again, pick a license
     'Programming Language :: Python :: 3',      
     'Programming Language :: Python :: 3.8',

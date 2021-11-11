@@ -2,6 +2,7 @@ import regex
 from typing import Union
 
 import chompjs
+import re
 
 regex.Default_VERSION = regex.VERSION0
 
@@ -69,3 +70,20 @@ def extract_js_content(content: Union[list, str]) -> dict[str, Union[dict, list,
             results[obj_name] = parsed_obj
 
     return results
+
+
+def get_by_borders(string : str, start_string : str = "", end_string : str = "", remove_string : bool = False) -> list[str]:
+    '''
+
+    :param string: string to extract from
+    :param start_string: the left border from the content to extract
+    :param end_string: the right border from the content to extract
+    :param remove_string: if true the left and right border gets removed from the result string
+    :return: a list with the extracted strings
+    '''
+
+    regex : str = f"{start_string}(?:(?:\(.*?\))|(?:[^\(\)]*?)){end_string}"
+    result : list = re.findall(regex, string)
+    if remove_string:
+        result : list = list(map(lambda x: x.replace(start_string, "").replace(end_string, ""), result))
+    return result

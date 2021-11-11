@@ -1,7 +1,6 @@
 from typing import Union
 import pytest
-from src.js_extractor import extract_js_content
-
+from js_extractor.js_extractor import extract_js_content
 
 @pytest.mark.parametrize('content, expected_result', [
     ('var content = "value1"',                      {'content': ['value1']}),
